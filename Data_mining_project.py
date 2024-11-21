@@ -28,12 +28,6 @@ def check_correlation(df_correlation): # correlation between amount of days[end 
     print(df)
     return df_correlation
 
-def make_null(df):
-    percentage_null = 0.2
-    num_nulls = int(len(df) * percentage_null)
-    indices = np.random.choice(df.index, size=num_nulls, replace=False)
-    df.loc[indices, 'Age'] = np.nan
-    return df
 
 def handling_missing_values(df):
     #inditialize dictionary for medication
